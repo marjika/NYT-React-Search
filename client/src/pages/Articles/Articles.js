@@ -14,9 +14,9 @@ class Articles extends Component {
     topic: ""
   };
 
+//saves the article information so that axios can send to the server side
 saveArticle = id => {
     const save = this.state.articles.filter(article => article._id === id);
-    console.log(save[0].pub_date);
     if (save[0].headline.main && save[0].web_url) {
       API.saveArticle({
         title: save[0].headline.main,
@@ -29,6 +29,7 @@ saveArticle = id => {
     }
   };
 
+  //deletes the article that is saved to the database from array of articles in state
   filterArticle = id => {
     const articles = this.state.articles.filter(article => article._id !== id);
     this.setState({ articles });
@@ -41,6 +42,7 @@ saveArticle = id => {
     });
   };
 
+  //sets the user's search parameters to state so that the API call to NYT can be made
   handleFormSubmit = event => {
     event.preventDefault();
     this.setState({ articles: [] })
@@ -55,12 +57,10 @@ saveArticle = id => {
           throw new Error(res.data);
         }
         this.setState({ articles: res.data.response.docs, error: "" });
-        console.log(this.state.articles);
         this.setState({ start: "", end: "", topic: "" })
       })
       .catch(err => this.setState({ error: err.message }));
     }
-    console.log(this.state.topic);
   };
 
   render() {

@@ -30,7 +30,7 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
-.col-md-3, .col-md-6, .col-md-10, .list-group-item {
+.col-md-3, .col-md-6, .col-md-10, .col-md-8, .list-group-item {
   color: white;
   margin-bottom: 2%;
   margin-top: 1%;
@@ -51,10 +51,6 @@ h1, h2, h3 {
   height: auto;
   text-align: center;
 }
-
-/* .col-md-12 {
-  max-width: 80%;
-} */
 
 .list-group-item {
   text-align: left;

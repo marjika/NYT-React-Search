@@ -14,6 +14,7 @@ class Detail extends Component {
     this.loadArticles();
   }
 
+  //calls to the database so that saved articles can be loaded and displayed on the page
   loadArticles = () => {
     API.getSaved()
       .then(res =>
@@ -22,8 +23,8 @@ class Detail extends Component {
       .catch(err => console.log(err));
   };
 
+  //deletes the article from the database
   deleteArticle = id => {
-    console.log(id);
     API.deleteArticle(id)
       .then(res => this.loadArticles())
       .catch(err => console.log(err));
