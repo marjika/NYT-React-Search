@@ -18,4 +18,4 @@ This application uses boostrap and follows that structure, using container, row,
 
 ##### About this Application
 
-Create-react-app was used initially to set up the proper client-server structure.  The user can search articles in the New York Times API. Database and file components were added so that the user could save articles, adding utility to the application.  **New York Times** React Search is hosted at ....  This project was created and is maintained by me, Marjika Howarth.
+Create-react-app was used initially to set up the proper client-server structure.  The user can search articles in the New York Times API. Database and file components were added so that the user could save articles, adding utility to the application.  **New York Times** React Search is hosted at "https://glacial-badlands-94304.herokuapp.com/".  This project was created and is maintained by me, Marjika Howarth.
